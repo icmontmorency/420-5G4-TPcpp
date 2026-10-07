@@ -1,6 +1,6 @@
 #include <iostream>
 #include <algorithm>
-
+#include <sstream>
 #include "book.h"
 
 using namespace std;
@@ -13,11 +13,11 @@ Book::Book(const string& title, const string& author, const string& isbn) {
     this->isbn = isbn;
 };
 
-    string Book::getTitle() const {return this->title;}
-    string Book::getAuthor() const {return this->author;}
-    string Book::getISBN() const {return this->isbn;}
-    bool Book::getAvailability() const {return this->isAvailable;}
-    string Book::getBorrowerId() const {return this->borrowerId;}
+    string Book::getTitle() const {return title;}
+    string Book::getAuthor() const {return author;}
+    string Book::getISBN() const {return isbn;}
+    bool Book::getAvailability() const {return isAvailable;}
+    string Book::getBorrowerId() const {return borrowerId;}
 
     // Setters
     void Book::setTitle(const string& title){this->title = title;}
@@ -34,11 +34,21 @@ Book::Book(const string& title, const string& author, const string& isbn) {
 
     };
     string Book::toString() const {
-
+        return "Titre: " + title + "\nAuteur: " + author +
+             "\nISBN: " + isbn;
     };
     string Book::toFileFormat() const {
-
+        return title + "|" + author +
+             "|" + isbn + "|" + to_string(isAvailable) + "|" + borrowerId;
     };
     void Book::fromFileFormat(const string& line) {
-
+        stringstream ss(line);
+        string availableStr;
+        
+        getline(ss, title, '|');
+        getline(ss, author, '|');
+        getline(ss, isbn, '|');
+        getline(ss, availableStr, '|');
+        getline(ss, borrowerId, '|');
+        this->isAvailable = availableStr == "1";
     };

@@ -156,7 +156,10 @@ void Library::displayAllBooks() {
     cout << "\n=== TOUS LES LIVRES ===\n";
     for (size_t i = 0; i < books.size(); ++i) {
         cout << "\nLivre " << (i + 1) << " :\n";
-        cout << books[i]->toString() << "\n";
+        cout << books[i]->toString() << "\n";       
+        if (!books[i]->getAvailability()) {
+            
+        }
         cout << "-------------------------\n";
     }
 }

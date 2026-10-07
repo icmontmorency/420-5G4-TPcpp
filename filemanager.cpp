@@ -6,8 +6,8 @@
 using namespace std;
 
 // Constructor
-FileManager::FileManager(const string& booksFile, const string& usersFile)
-    : booksFileName(booksFile), usersFileName(usersFile) {}
+FileManager::FileManager(const string& booksFile, const string& usersFile, const string& journalFile)
+    : booksFileName(booksFile), usersFileName(usersFile), journalFileName(journalFile) {}
 
 // Save all library data
 bool FileManager::saveLibraryData(Library& library) {
@@ -33,6 +33,20 @@ bool FileManager::saveBooksToFile(Library& library) {
     for (Book* book : books) {
         file << book->toFileFormat() << "\n";
     }
+    
+    file.close();
+    return true;
+}
+
+bool FileManager::writeToJournal(string entry) {
+    ofstream file(journalFileName);
+
+    cout << "Writing journal to: " << journalFileName << endl;
+    if (!file.is_open()) {
+        cout << "Erreur : Impossible d'ouvrir " << journalFileName << " en écriture.\n";
+        return false;
+    }
+    file << entry + "\n";
     
     file.close();
     return true;

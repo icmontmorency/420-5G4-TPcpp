@@ -52,6 +52,7 @@ CMakeFiles/bibliotheque.dir/book.cpp.o: /workspaces/420-5G4-TPcpp/book.cpp \
   /usr/include/c++/14/bits/range_access.h \
   /usr/include/c++/14/bits/refwrap.h \
   /usr/include/c++/14/bits/requires_hosted.h \
+  /usr/include/c++/14/bits/sstream.tcc \
   /usr/include/c++/14/bits/std_abs.h \
   /usr/include/c++/14/bits/stl_algo.h \
   /usr/include/c++/14/bits/stl_algobase.h \
@@ -99,6 +100,7 @@ CMakeFiles/bibliotheque.dir/book.cpp.o: /workspaces/420-5G4-TPcpp/book.cpp \
   /usr/include/c++/14/pstl/execution_defs.h \
   /usr/include/c++/14/pstl/glue_algorithm_defs.h \
   /usr/include/c++/14/pstl/pstl_config.h \
+  /usr/include/c++/14/sstream \
   /usr/include/c++/14/stdexcept \
   /usr/include/c++/14/streambuf \
   /usr/include/c++/14/string \
@@ -1231,8 +1233,6 @@ CMakeFiles/bibliotheque.dir/filemanager.cpp.o:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
 
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
 /usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /lib/x86_64-linux-gnu/libmvec.so.1:
@@ -1505,6 +1505,8 @@ CMakeFiles/bibliotheque.dir/book.cpp.o:
 
 /usr/include/c++/14/bits/uses_allocator.h:
 
+/usr/include/c++/14/bits/sstream.tcc:
+
 /usr/include/c++/14/bits/memoryfwd.h:
 
 /usr/include/c++/14/bits/stl_construct.h:
@@ -1516,6 +1518,12 @@ CMakeFiles/bibliotheque.dir/book.cpp.o:
 /usr/include/c++/14/bits/range_access.h:
 
 /usr/include/c++/14/bits/refwrap.h:
+
+/usr/include/c++/14/sstream:
+
+/usr/include/c++/14/bits/stl_algo.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
 
@@ -1725,8 +1733,6 @@ CMakeFiles/bibliotheque.dir/main.cpp.o:
 
 /usr/include/c++/14/bits/quoted_string.h:
 
-/usr/include/c++/14/bits/sstream.tcc:
-
 /usr/include/c++/14/bits/new_allocator.h:
 
 /usr/include/c++/14/bits/stl_bvector.h:
@@ -1768,7 +1774,3 @@ CMakeFiles/bibliotheque.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
 /usr/include/c++/14/ratio:
-
-/usr/include/c++/14/bits/stl_algo.h:
-
-/usr/include/c++/14/sstream:
